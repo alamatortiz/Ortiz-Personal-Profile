@@ -107,7 +107,10 @@ h2 em{font-family:var(--serif);font-weight:400;color:var(--accent)}
 .about{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(40px,6vw,90px);align-items:start;margin-top:60px}
 .portrait{aspect-ratio:4/5;border-radius:24px;background:var(--card);border:1px solid var(--line);position:relative;overflow:hidden;display:grid;place-items:center}
 .portrait .initials{font-family:var(--serif);font-size:clamp(120px,16vw,200px);font-style:italic;color:var(--accent);line-height:1}
-.portrait .tag{position:absolute;bottom:16px;left:16px;right:16px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;z-index:1;filter:grayscale(1) contrast(1.05);transform:scale(1.04);transition:filter .7s,transform .7s}
+.portrait:hover img{filter:none;transform:scale(1)}
+.portrait::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(transparent 60%,#000000b0);pointer-events:none}
+.portrait .tag{position:absolute;bottom:16px;left:16px;right:16px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:#fff;z-index:3;letter-spacing:.04em}
 .portrait::before{content:"";position:absolute;inset:-50%;background:conic-gradient(from 0deg,transparent,var(--accent),transparent 30%);animation:spin 8s linear infinite;opacity:.12}
 @keyframes spin{to{transform:rotate(360deg)}}
 .about-text p{font-size:clamp(18px,1.8vw,22px);margin-bottom:22px;color:var(--muted)}
@@ -241,8 +244,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <h2 class="reveal">Built different, <em>literally.</em></h2>
     <div class="about">
       <div class="portrait reveal">
-        <span class="initials">AO</span>
-        <div class="tag"><span>// photo coming soon</span><span>PH 🇵🇭</span></div>
+        <img src="photo.jpg" alt="Portrait of Alvin Matthew Ortiz">
+        <div class="tag"><span>Alvin M. Q. Ortiz</span><span>Cabuyao, PH</span></div>
       </div>
       <div class="about-text reveal">
         <p>I'm Alvin Matthew Quismundo Ortiz, a third-year student who'd rather ship a working prototype than talk about one.</p>
