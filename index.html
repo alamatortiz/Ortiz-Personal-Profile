@@ -3,8 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alvin Ortiz — Portfolio</title>
-<meta name="description" content="Alvin Matthew Quismundo Ortiz — aspiring developer, IT student, internship-ready.">
+<title>Alvin Ortiz — IT Support &amp; Networking</title>
+<meta name="description" content="Alvin Matthew Q. Ortiz: 4th-year BSIT student at Pamantasan ng Cabuyao, looking for an OJT placement in IT support, helpdesk or NOC.">
+<meta property="og:title" content="Alvin Ortiz — IT Support &amp; Networking">
+<meta property="og:description" content="4th-year BSIT student looking for an OJT placement in IT support, helpdesk or NOC.">
+<meta property="og:image" content="https://alamatortiz.github.io/Ortiz-Personal-Profile/photo.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314120f'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='13' font-weight='700' fill='%23f3f0e8' text-anchor='middle'%3EAO%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -29,6 +34,22 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.5;overflow-x:hidden;transition:background .4s,color .4s}
 ::selection{background:var(--accent);color:#fff}
 a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:16px;top:-60px;z-index:400;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;font-size:14px}
+.skip:focus{top:12px}
+
+/* learning path */
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:60px}
+.cert{border:1px solid var(--line);border-radius:18px;padding:24px;background:var(--card);display:flex;flex-direction:column;gap:10px}
+.cert .badge{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;width:fit-content;padding:4px 10px;border-radius:99px;border:1px dashed var(--muted);color:var(--muted)}
+.cert .badge.next{border-style:solid;border-color:var(--accent);color:var(--accent)}
+.cert h3{font-size:20px;letter-spacing:-.01em;line-height:1.2}
+.cert p{color:var(--muted);font-size:14px}
+.cert .src{margin-top:auto;font-family:var(--mono);font-size:12px;color:var(--ink)}
+.note{margin-top:28px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.ojt{margin-top:40px;border:1px dashed var(--line);border-radius:18px;padding:28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.ojt b{font-size:20px}
+.ojt p{color:var(--muted);flex:1;min-width:240px}
 .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
 
 /* grain */
@@ -197,17 +218,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 </style>
 </head>
 <body>
-<div class="cursor" id="cursor"></div>
+<a class="skip" href="#about">Skip to content</a>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
 
 <nav id="nav">
   <div class="wrap">
     <a href="#top" class="logo"><b>AO</b> alvin.ortiz</a>
     <div class="links">
-      <a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Work</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#learning">Learning</a><a href="#work">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
     </div>
     <div class="nav-r">
       <button class="icon-btn" id="theme" aria-label="Toggle theme">◐</button>
-      <a class="btn primary" href="#contact" style="padding:10px 18px;font-size:14px">Hire me <span class="arr">→</span></a>
+      <a class="btn primary" href="#contact" style="padding:10px 18px;font-size:14px">Contact <span class="arr">→</span></a>
     </div>
   </div>
 </nav>
@@ -215,15 +237,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <header class="hero" id="top">
   <div class="grid-bg"></div><div class="orb"></div><div class="orb b"></div>
   <div class="wrap">
-    <div class="status"><span class="dot"></span> Open to internship opportunities · 2026</div>
+    <div class="status"><span class="dot"></span> Looking for an OJT placement · IT support / helpdesk / NOC</div>
     <h1>
       <span class="line"><span>Alvin</span></span>
       <span class="line"><span><span class="serif">Ortiz</span>.</span></span>
     </h1>
     <div class="hero-sub">
-      <p>A <strong>22-year-old IT student</strong> at Pamantasan ng Cabuyao who learned discipline on the warehouse floor and now ships <strong>full-stack web and mobile apps</strong>.</p>
+      <p>A <strong>4th-year BSIT student</strong> at Pamantasan ng Cabuyao, looking for an <strong>OJT in IT support, helpdesk or NOC</strong>. I'm working toward <strong>networking and security</strong>, one step at a time.</p>
       <div class="cta">
-        <a href="#work" class="btn primary">See my work <span class="arr">→</span></a>
+        <a href="#learning" class="btn primary">My learning path <span class="arr">→</span></a>
         <a href="https://github.com/alamatortiz" target="_blank" rel="noopener" class="btn">GitHub <span class="arr">→</span></a>
       </div>
     </div>
@@ -233,28 +255,28 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <div class="marquee" aria-hidden="true">
   <div class="track">
-    <span>React</span><span class="s">full-stack</span><span>Kotlin</span><span class="s">mobile</span><span>Node.js</span><span class="s">real-time</span><span>MySQL</span><span class="s">hard worker</span>
-    <span>React</span><span class="s">full-stack</span><span>Kotlin</span><span class="s">mobile</span><span>Node.js</span><span class="s">real-time</span><span>MySQL</span><span class="s">hard worker</span>
+    <span>IT Support</span><span class="s">troubleshooting</span><span>Networking</span><span class="s">Packet Tracer</span><span>Cybersecurity</span><span class="s">accuracy under pressure</span>
+    <span>IT Support</span><span class="s">troubleshooting</span><span>Networking</span><span class="s">Packet Tracer</span><span>Cybersecurity</span><span class="s">accuracy under pressure</span>
   </div>
 </div>
 
 <section id="about">
   <div class="wrap">
     <div class="eyebrow reveal" data-n="01">About</div>
-    <h2 class="reveal">Built different, <em>literally.</em></h2>
+    <h2 class="reveal">Support first. <em>Then networks, then security.</em></h2>
     <div class="about">
       <div class="portrait reveal">
         <img src="photo.jpg" alt="Portrait of Alvin Matthew Ortiz">
         <div class="tag"><span>Alvin M. Q. Ortiz</span><span>Cabuyao, PH</span></div>
       </div>
       <div class="about-text reveal">
-        <p>I'm Alvin Matthew Quismundo Ortiz, a third-year student who'd rather ship a working prototype than talk about one.</p>
-        <p>Before writing code, I worked in warehouses. Inventory, deadlines, heavy lifting, and teams that have to stay in sync. It taught me to be reliable, to keep systems organized, and to keep going when the work gets hard.</p>
-        <p>Now I'm putting the same mindset into software. I'm looking for an internship where I can learn from real engineers, contribute from day one, and grow quickly.</p>
+        <p>I'm Alvin Matthew Quismundo Ortiz, a 4th-year IT student looking for my first role in IT support, helpdesk or a NOC.</p>
+        <p>On our capstone, OAMS, I was the backend developer. I also deployed the system, managed our database, and kept watch for errors inside and outside the app. Keeping a live system running taught me that the setup behind an app matters as much as the code. That's the side of IT I want to work in.</p>
+        <p>I'm building my skills in that order: support, then networking (Cisco Packet Tracer), then security. My long-term goal is a SOC analyst or network security role.</p>
         <div class="facts">
-          <div class="fact"><b data-count="22">0</b><small>Years old</small></div>
-          <div class="fact"><b>3rd</b><small>Year student</small></div>
-          <div class="fact"><b data-count="100" data-suffix="%">0</b><small>Willing to learn</small></div>
+          <div class="fact"><b>4th</b><small>Year BSIT</small></div>
+          <div class="fact"><b data-count="3">0</b><small>Focus tracks</small></div>
+          <div class="fact"><b data-count="2">0</b><small>Shipped projects</small></div>
         </div>
       </div>
     </div>
@@ -266,23 +288,38 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <div class="eyebrow reveal" data-n="02">Toolkit</div>
     <h2 class="reveal">What I <em>bring</em> to the table.</h2>
     <div class="skills">
-      <div class="skill reveal"><div><span class="n">/01</span><h3>Web</h3></div><div class="chips"><span class="chip">React 19</span><span class="chip">Vite</span><span class="chip">JavaScript</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Socket.IO</span></div></div>
-      <div class="skill reveal"><div><span class="n">/02</span><h3>Mobile</h3></div><div class="chips"><span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">React Native</span><span class="chip">Expo</span><span class="chip">MVVM</span></div></div>
-      <div class="skill reveal"><div><span class="n">/03</span><h3>Data &amp; Auth</h3></div><div class="chips"><span class="chip">MySQL</span><span class="chip">TiDB Cloud</span><span class="chip">Room</span><span class="chip">JWT</span><span class="chip">Firebase</span></div></div>
-      <div class="skill reveal"><div><span class="n">/04</span><h3>Tooling</h3></div><div class="chips"><span class="chip">Git</span><span class="chip">Docker</span><span class="chip">Jest</span><span class="chip">Vitest</span><span class="chip">Web Push</span></div></div>
+      <div class="skill reveal"><div><span class="n">/01</span><h3>IT Support</h3></div><div class="chips"><span class="chip">Windows</span><span class="chip">Troubleshooting</span><span class="chip">User accounts</span><span class="chip">Documentation</span></div></div>
+      <div class="skill reveal"><div><span class="n">/02</span><h3>Networking</h3></div><div class="chips"><span class="chip">Cisco Packet Tracer</span><span class="chip">IP addressing</span><span class="chip">Basic routing</span></div></div>
+      <div class="skill reveal"><div><span class="n">/03</span><h3>Systems &amp; Ops</h3></div><div class="chips"><span class="chip">Deployment</span><span class="chip">Database admin</span><span class="chip">Error monitoring</span><span class="chip">Docker</span><span class="chip">MySQL</span></div></div>
+      <div class="skill reveal"><div><span class="n">/04</span><h3>Also built with</h3></div><div class="chips"><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">Kotlin</span><span class="chip">Git</span></div></div>
     </div>
   </div>
 </section>
 
-<section id="work">
+<section id="learning">
+  <div class="wrap">
+    <div class="eyebrow reveal" data-n="03">Learning path</div>
+    <h2 class="reveal">Free certifications, <em>in order.</em></h2>
+    <div class="certs">
+      <div class="cert reveal"><span class="badge next">Up next</span><h3>Networking Basics</h3><p>Cisco Networking Academy. Self-paced, free, digital badge.</p><a class="src" href="https://www.netacad.com/" target="_blank" rel="noopener">netacad.com ↗</a></div>
+      <div class="cert reveal"><span class="badge">Planned</span><h3>Introduction to Cybersecurity</h3><p>Cisco Networking Academy. Self-paced, free, digital badge.</p><a class="src" href="https://www.netacad.com/courses/introduction-to-cybersecurity" target="_blank" rel="noopener">netacad.com ↗</a></div>
+      <div class="cert reveal"><span class="badge">Planned</span><h3>Fortinet NSE 1 – 3</h3><p>Fortinet Training Institute. Free self-paced courses; NSE 3 adds an online exam.</p><a class="src" href="https://training.fortinet.com/" target="_blank" rel="noopener">training.fortinet.com ↗</a></div>
+      <div class="cert reveal"><span class="badge">Planned</span><h3>Cybersecurity Fundamentals</h3><p>IBM SkillsBuild. Free course and Credly badge.</p><a class="src" href="https://skillsbuild.org/" target="_blank" rel="noopener">skillsbuild.org ↗</a></div>
+      <div class="cert reveal"><span class="badge">During OJT</span><h3>CyberOps Associate</h3><p>Cisco Networking Academy. SOC-focused, about 70 hours.</p><a class="src" href="https://www.netacad.com/" target="_blank" rel="noopener">netacad.com ↗</a></div>
+    </div>
+    <p class="note reveal">// No certificates earned yet. Each card links to its badge as soon as I finish it.</p>
+  </div>
+</section>
+
+<section id="work" style="padding-top:0">
   <div class="wrap">
     <div class="proj-head">
-      <div><div class="eyebrow reveal" data-n="03">Selected work</div><h2 class="reveal">Things I've <em>built.</em></h2></div>
-      <p class="reveal">Full-stack web, native Android, and cross-platform mobile. Each one is built to solve a real campus problem.</p>
+      <div><div class="eyebrow reveal" data-n="04">Projects</div><h2 class="reveal">Things I've <em>built.</em></h2></div>
+      <p class="reveal">School projects where I set up servers, databases, logins and deployments. Networking labs are coming next.</p>
     </div>
     <div class="projects">
-      <a class="project reveal" href="https://github.com/alamatortiz/OAMS-Office-Automation-Management-System" target="_blank" rel="noopener"><span class="p-n">001</span><div class="p-title">OAMS<small>2026 · Capstone · Team of 3</small></div><div class="p-meta">Office Automation Management System for six colleges at PnC, with real-time queues, appointment booking, document handling, push notifications, and separate web and mobile apps for students, faculty and admins.<div class="chips"><span class="chip">React</span><span class="chip">React Native</span><span class="chip">Express</span><span class="chip">Socket.IO</span><span class="chip">MySQL</span><span class="chip">Docker</span></div></div><span class="p-arr">→</span></a>
-      <a class="project reveal" href="https://github.com/alamatortiz/SmartCampusCompanion" target="_blank" rel="noopener"><span class="p-n">002</span><div class="p-title">Smart Campus Companion<small>2026 · Android · Midterm project</small></div><div class="p-meta">Offline-first Android app for student life, with a task manager, an announcement hub, and multi-user data isolation. Built with MVVM, Room and Material 3.<div class="chips"><span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Room</span><span class="chip">Firebase</span></div></div><span class="p-arr">→</span></a>
+      <a class="project reveal" href="https://github.com/alamatortiz/OAMS-Office-Automation-Management-System" target="_blank" rel="noopener"><span class="p-n">001</span><div class="p-title">OAMS<small>2026 · Capstone · Team of 3 · Backend, deployment &amp; database</small></div><div class="p-meta">Office automation system for six colleges at Pamantasan ng Cabuyao: queues, appointments and documents. <strong>My part:</strong> I built the Node.js/Express backend, deployed the system, managed the MySQL / TiDB Cloud database, and monitored for errors. I also helped a little with the design.<div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">MySQL / TiDB</span><span class="chip">Docker</span><span class="chip">Deployment</span></div></div><span class="p-arr">→</span></a>
+      <a class="project reveal" href="https://github.com/alamatortiz/SmartCampusCompanion" target="_blank" rel="noopener"><span class="p-n">002</span><div class="p-title">Smart Campus Companion<small>2026 · Android · Midterm project</small></div><div class="p-meta">Offline-first Android app with separate user accounts. Each student only sees their own data, enforced at the database level.<div class="chips"><span class="chip">Kotlin</span><span class="chip">Room / SQLite</span><span class="chip">Firebase</span></div></div><span class="p-arr">→</span></a>
       <a class="project reveal" href="https://github.com/alamatortiz" target="_blank" rel="noopener"><span class="p-n">003</span><div class="p-title">This Portfolio<small>2026 · Personal</small></div><div class="p-meta">Hand-built with plain HTML, CSS and JavaScript. No frameworks.<div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span></div></div><span class="p-arr">→</span></a>
     </div>
   </div>
@@ -290,12 +327,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <section id="journey" style="padding-top:0">
   <div class="wrap journey">
-    <div><div class="eyebrow reveal" data-n="04">Journey</div><h2 class="reveal">From the floor to the <em>stack.</em></h2></div>
+    <div><div class="eyebrow reveal" data-n="05">Journey</div><h2 class="reveal">From the classroom to the <em>server room.</em></h2></div>
     <div class="timeline">
-      <div class="step now reveal"><span class="when">NOW · 2026</span><h3>Seeking an IT Internship</h3><p>Finishing my capstone and looking for a team where I can contribute to real products and keep learning.</p></div>
-      <div class="step reveal"><span class="when">CURRENT · 3RD YEAR</span><h3>BS Information Technology</h3><p>College of Computer Studies, Pamantasan ng Cabuyao. My capstone is OAMS, a full-stack system that automates office services across the university's colleges.</p><div class="chips"><span class="chip">Pamantasan ng Cabuyao</span><span class="chip">CCS</span></div></div>
-      <div class="step reveal"><span class="when">PAST</span><h3>Warehouse Associate</h3><p>Handled inventory, order picking and logistics in a fast-paced environment. I learned accuracy, accountability, and how real operations run, all of which I bring to building software.</p><div class="chips"><span class="chip">Inventory</span><span class="chip">Logistics</span><span class="chip">Teamwork</span></div></div>
+      <div class="step now reveal"><span class="when">NOW · 2026</span><h3>Looking for an OJT placement</h3><p>Open to IT support, helpdesk, NOC or sysadmin roles in companies, government offices, schools, hospitals and BPOs.</p></div>
+      <div class="step reveal"><span class="when">CURRENT · 4TH YEAR</span><h3>BS Information Technology</h3><p>College of Computer Studies, Pamantasan ng Cabuyao. My capstone is OAMS, a system that automates office services across the university's colleges.</p><div class="chips"><span class="chip">Pamantasan ng Cabuyao</span><span class="chip">CCS</span></div></div>
+      <div class="step reveal"><span class="when">2026</span><h3>Capstone · OAMS · Backend &amp; Ops</h3><p>Backend developer on a team of three. I deployed the system, managed the database, and monitored it for errors. Next, I want to test its security properly.</p><div class="chips"><span class="chip">Backend</span><span class="chip">Deployment</span><span class="chip">Database admin</span></div></div>
     </div>
+  </div>
+  <div class="wrap">
+    <div class="ojt reveal"><b>OJT log</b><p>Starts when my placement is confirmed. I'll post weekly notes on what I learned, without any company or customer details.</p></div>
   </div>
 </section>
 
@@ -308,7 +348,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <section id="contact" class="contact">
   <div class="wrap">
-    <div class="eyebrow reveal" data-n="05" style="justify-content:center">Contact</div>
+    <div class="eyebrow reveal" data-n="06" style="justify-content:center">Contact</div>
     <h2 class="reveal">Let's <em>work</em> together.</h2>
     <a class="mail reveal" href="mailto:shimigameh@gmail.com">shimigameh@gmail.com</a>
     <div class="socials reveal">
